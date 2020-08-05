@@ -45,7 +45,7 @@
 </div>
 
     <div class="ui container">
-        @foreach (['danger', 'warning', 'success', 'info'] as $type)
+        @foreach (['error', 'warning', 'success', 'info'] as $type)
             @if (session('status-'.$type))
                 <p class="ui {{$type}} message">{{ session('status-'.$type) }}</p>
             @endif
