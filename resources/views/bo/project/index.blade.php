@@ -13,7 +13,7 @@
             @foreach($projects as $project)
                 <tr>
                     <td>{{$project->name}}</td>
-                    <td>{{url('/survey/') . $project->uuid}}</td>
+                    <td>{{url('/survey') . '/'. $project->uuid}}</td>
                     <td>{{$project->created_at}}</td>
                 </tr>
             @endforeach
