@@ -21,7 +21,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::namespace('Bo')->prefix('bo')->middleware(['auth'])->group(function () {
+Route::namespace('Bo')->prefix('bo')->middleware(['auth', 'admin'])->group(function () {
     Route::get('projects', 'ProjectController@index')
          ->name('projects.index');
 
