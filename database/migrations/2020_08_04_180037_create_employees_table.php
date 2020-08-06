@@ -17,7 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('role');
-            $table->integer('project_id')->unsigned();
+            $table->unsignedBigInteger('project_id');
             $table->timestamps();
 
             $table->foreign('project_id')->references('id')->on('projects');
@@ -31,6 +31,6 @@ class CreateEmployeesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('employee');
+        Schema::dropIfExists('employees');
     }
 }

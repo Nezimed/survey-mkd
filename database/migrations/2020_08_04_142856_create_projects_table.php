@@ -17,7 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('uuid');
-            $table->integer('client_id')->unsigned();
+            $table->unsignedBigInteger('client_id');
             $table->timestamps();
 
 
