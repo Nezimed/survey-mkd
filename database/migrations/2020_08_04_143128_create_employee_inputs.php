@@ -15,8 +15,8 @@ class CreateEmployeeInputs extends Migration
     {
         Schema::create('employee_inputs', function (Blueprint $table) {
             $table->id();
-            $table->integer('employee_id');
-            $table->integer('question_id');
+            $table->integer('employee_id')->unsigned();
+            $table->integer('question_id')->unsigned();
             $table->string('answer');
             $table->timestamps();
 
