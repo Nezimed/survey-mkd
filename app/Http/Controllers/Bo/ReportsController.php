@@ -29,6 +29,7 @@ class ReportsController extends Controller
                              $query->select('id')->from('questions')->where('type', 'range');
                          })
                          ->groupBy('clients.id')
+                         ->groupBy('clients.name')
                          ->select('clients.name as name', DB::raw('avg(answer) as average'))
                          ->get();
 
